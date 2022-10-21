@@ -15,15 +15,11 @@ class Employee:
 
     def __str__(self):
         if self.commission:
-            return f"{self.name} works on a {str(self.pay)} and recieves a {str(self.commission)}.  Their total pay is {self.get_pay()}."
+            return f"{self.name} works on a {str(self.pay)} and receives a {str(self.commission)}.  Their total pay is {self.get_pay()}."
         else:
             return f"{self.name} works on a {str(self.pay)}.  Their total pay is {self.get_pay()}."
 
-class Pay:
-    def calculate_pay(self):
-        return
-
-class Salary(Pay):
+class Salary:
     def __init__(self, amount):
         self.amount = amount
 
@@ -33,7 +29,7 @@ class Salary(Pay):
     def __str__(self):
         return f"monthly salary of {self.amount}"
 
-class ContractPay(Pay):
+class ContractPay:
     def __init__(self, hours, rate):
         self.hours = hours
         self.rate = rate
@@ -44,11 +40,7 @@ class ContractPay(Pay):
     def __str__(self):
         return f"contract of {self.hours} hours at {self.rate}/hour"
 
-class Commission:
-    def calculate_commission(self):
-        return
-
-class Bonus(Commission):
+class Bonus:
     def __init__(self, bonus):
         self.bonus = bonus
 
@@ -58,7 +50,7 @@ class Bonus(Commission):
     def __str__(self):
         return f"bonus commission of {self.bonus}"
 
-class ContractCommission(Commission):
+class ContractCommission:
     def __init__(self, nOfContracts, rate):
         self.nOfContracts = nOfContracts
         self.rate = rate
